@@ -1,1 +1,444 @@
-TEST
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basswin Casino</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white">
+<header class="flex justify-between items-center p-4 bg-black">
+    <img src="logo.png" alt="Basswin" class="w-24">
+    <nav class="hidden lg:flex space-x-4">
+        <a href="#" class="text-white">Games</a>
+        <a href="#" class="text-white">Sport</a>
+        <a href="#" class="text-white">Cybersport</a>
+        <a href="#" class="text-white">Promo</a>
+        <a href="#" class="text-white">Tournaments</a>
+        <a href="#" class="text-white">Lotteries</a>
+    </nav>
+    <div class="space-x-2 hidden lg:flex">
+        <button class="bg-yellow-500 text-black px-4 py-2 rounded">Sign up</button>
+        <button class="bg-white text-black px-4 py-2 rounded">Login</button>
+    </div>
+    <button id="menu-btn" class="block lg:hidden text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
+</header>
+
+<div id="mobile-menu" class="hidden lg:hidden bg-black p-4">
+    <nav class="flex flex-col space-y-2">
+        <a href="#" class="text-white">Games</a>
+        <a href="#" class="text-white">Sport</a>
+        <a href="#" class="text-white">Cybersport</a>
+        <a href="#" class="text-white">Promo</a>
+        <a href="#" class="text-white">Tournaments</a>
+        <a href="#" class="text-white">Lotteries</a>
+    </nav>
+    <div class="flex flex-col space-y-2 mt-4">
+        <button class="bg-yellow-500 text-black px-4 py-2 rounded">Sign up</button>
+        <button class="bg-white text-black px-4 py-2 rounded">Login</button>
+    </div>
+</div>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+
+
+
+
+<main class="p-4">
+    <section class="text-center my-8">
+        <h1 class="text-4xl font-bold text-yellow-400">450% + 375FS</h1>
+        <p class="text-xl">In top-slots for your first deposits!</p>
+        <div class="mt-4">
+            <button class="bg-yellow-500 text-black px-6 py-3 rounded">Hurry up to get 50 Free spins</button>
+        </div>
+    </section>
+
+    <div class="text-center my-8">
+        <img src="path/to/your/image.jpg" alt="Promotional Image" class="w-full h-auto">
+    </div>
+
+    <section class="text-center my-8">
+        <p class="text-lg">Hey, fellow gamers and reel spinners! Michael Slot here to give you the lowdown on Bass Win Casino, where  gaming dreams could turn into jackpot reality. Since bursting onto the scene over a decade ago, Bass Win has kept the dice rolling and slots spinning with the same zest you'd find in those classic, cozy casinos of yesteryear.
+Whether you’re here to try your luck on  unique slots or aiming for the big bucks with progressive jackpots, we’ve got your back with stable software and user-friendly gaming. So, why not spin where the real players play? Join the Bass Win family today and let the good times roll!</p>
+    </section>
+
+    <section class="my-8">
+        <h2 class="text-2xl font-bold text-center mb-4">Slots</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-gray-800 p-4 rounded">
+                <img src="slot1.png" alt="Slot 1" class="w-full">
+                <p class="mt-2">Basswin Casino has slots from all reputable providers from PragmaticPlay to Bgaming.</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded">
+                <img src="slot2.png" alt="Slot 2" class="w-full">
+                <p class="mt-2">Basswin Casino has slots from all reputable providers from PragmaticPlay to Bgaming.</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded">
+                <img src="slot3.png" alt="Slot 3" class="w-full">
+                <p class="mt-2">Basswin Casino has slots from all reputable providers from PragmaticPlay to Bgaming.</p>
+            </div>
+        </div>
+    </section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<section class="text-center my-8">
+    <h2 class="text-2xl font-bold mb-4">Casino Parameters</h2>
+    <div class="overflow-x-auto">
+        <table class="min-w-full bg-gray-800 text-white rounded-lg">
+            <thead>
+                <tr>
+                    <th class="py-2 px-4 bg-gray-700">Parameters</th>
+                    <th class="py-2 px-4 bg-gray-700">Information</th>
+                    <th class="py-2 px-4 bg-gray-700">Parameters</th>
+                    <th class="py-2 px-4 bg-gray-700">Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border-t border-gray-700 py-2 px-4">Minimum Deposit</td>
+                    <td class="border-t border-gray-700 py-2 px-4">$10</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Live Casino</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Yes</td>
+                </tr>
+                <tr class="bg-gray-900">
+                    <td class="border-t border-gray-700 py-2 px-4">Maximum Deposit</td>
+                    <td class="border-t border-gray-700 py-2 px-4">$5,000</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Blackjack</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Yes</td>
+                </tr>
+                <tr>
+                    <td class="border-t border-gray-700 py-2 px-4">Minimum Withdrawal</td>
+                    <td class="border-t border-gray-700 py-2 px-4">$20</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Game Slots</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Yes</td>
+                </tr>
+                <tr class="bg-gray-900">
+                    <td class="border-t border-gray-700 py-2 px-4">Maximum Withdrawal</td>
+                    <td class="border-t border-gray-700 py-2 px-4">$40,000/month</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Roulette</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Yes</td>
+                </tr>
+                <tr>
+                    <td class="border-t border-gray-700 py-2 px-4">Withdrawal Fee</td>
+                    <td class="border-t border-gray-700 py-2 px-4">No</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Tournaments</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Yes</td>
+                </tr>
+                <tr class="bg-gray-900">
+                    <td class="border-t border-gray-700 py-2 px-4">Number of Games</td>
+                    <td class="border-t border-gray-700 py-2 px-4">***</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Live Chat</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Yes</td>
+                </tr>
+                <tr>
+                    <td class="border-t border-gray-700 py-2 px-4">Number of Providers</td>
+                    <td class="border-t border-gray-700 py-2 px-4">***</td>
+                    <td class="border-t border-gray-700 py-2 px-4">VIP-program</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Yes</td>
+                </tr>
+                <tr class="bg-gray-900">
+                    <td class="border-t border-gray-700 py-2 px-4">Currencies</td>
+                    <td class="border-t border-gray-700 py-2 px-4">5</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Withdrawal Time</td>
+                    <td class="border-t border-gray-700 py-2 px-4">36 hours</td>
+                </tr>
+                <tr>
+                    <td class="border-t border-gray-700 py-2 px-4">Bank Cards</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Yes</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Blog</td>
+                    <td class="border-t border-gray-700 py-2 px-4">No</td>
+                </tr>
+                <tr class="bg-gray-900">
+                    <td class="border-t border-gray-700 py-2 px-4">Cryptocurrency</td>
+                    <td class="border-t border-gray-700 py-2 px-4">No</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Sports Betting/Live Betting</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Yes</td>
+                </tr>
+                <tr>
+                    <td class="border-t border-gray-700 py-2 px-4">Poker</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Yes</td>
+                    <td class="border-t border-gray-700 py-2 px-4">Number of Languages</td>
+                    <td class="border-t border-gray-700 py-2 px-4">3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+	
+	
+	
+	
+	
+	
+<section class="text-center my-8 p-4 black-800 text-white rounded-lg shadow-lg">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Join the Fun at Basswin Casino!</h2>
+    <p class="text-lg my-2">Ready to roll the dice? Start your adventure by registering with us. Here’s what you need to have handy:</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+        <div class="p-4 bg-gray-700 rounded-lg">
+            <img src="path/to/your/registration_step1.png" alt="ID Verification" class="w-full h-auto mb-2">
+            <h3 class="text-xl font-semibold">Step 1: Verify Your Identity</h3>
+            <p>A passport or a national ID card is required.</p>
+        </div>
+        <div class="p-4 bg-gray-700 rounded-lg">
+            <img src="path/to/your/registration_step2.png" alt="Address Proof" class="w-full h-auto mb-2">
+            <h3 class="text-xl font-semibold">Step 2: Prove Your Address</h3>
+            <p>Provide a utility bill or bank statement from the last three months.</p>
+        </div>
+        <div class="p-4 bg-gray-700 rounded-lg">
+            <img src="path/to/your/registration_step3.png" alt="Payment Method Proof" class="w-full h-auto mb-2">
+            <h3 class="text-xl font-semibold">Step 3: Confirm Your Payment Method</h3>
+            <p>For card payments, show only the necessary card details. For bank transfers, a linked bank statement is needed.</p>
+        </div>
+    </div>
+    <h3 class="text-xl font-semibold mt-4 text-yellow-500">Quick Verification Process</h3>
+    <p class="text-lg my-2">Submit your documents, and we'll have you set up in no time—usually within 24 hours. Don't miss out on the excitement waiting for you at Basswin Casino!</p>
+</section>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+<section class="my-8 p-4 black-800 text-white rounded-lg shadow-lg">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400 text-center">Bonuses and Offers</h2>
+
+
+    <div class="mb-8">
+        <h3 class="text-2xl font-bold mb-2 text-yellow-500 text-center">Game Bonuses Galore</h3>
+        <p class="text-lg mb-4 text-center">Dive into where your first deposit gets a 200% boost, Tuesdays bring up to 100 free spins, and weekends offer a 50% reload bonus. Climb from Bronze to Gold in the VIP program for more perks and cashback. Ready for action? Let’s play!</p>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-gray-700 rounded-lg">
+                <thead class="bg-gray-600 text-white">
+                    <tr>
+                    
+                        <th class="py-2 px-2">Criteria</th>
+                        <th class="py-2 px-2">Min/Max Deposit</th>
+                        <th class="py-2 px-2">Games Credited</th>
+                        <th class="py-2 px-2">Available Days</th>
+                        <th class="py-2 px-2">Bonus Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-gray-900">
+                        <td class="py-2 px-2">Welcome Bonus</td>
+                        <td class="py-2 px-2">USD 10 / USD 300</td>
+                        <td class="py-2 px-2">All slots and games</td>
+                        <td class="py-2 px-2">Any day</td>
+                        <td class="py-2 px-2">Get a hefty 200% bonus on your first deposit!</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-2">Daily Free Spins</td>
+                        <td class="py-2 px-2">USD 20 / USD 200</td>
+                        <td class="py-2 px-2">Selected slots</td>
+                        <td class="py-2 px-2">Tuesdays</td>
+                        <td class="py-2 px-2">Bag up to 100 free spins on top-rated slots.</td>
+                    </tr>
+                    <tr class="bg-gray-900">
+                        <td class="py-2 px-2">Weekend Reload</td>
+                        <td class="py-2 px-2">USD 50 / USD 500</td>
+                        <td class="py-2 px-2">Slots, Roulette, Poker</td>
+                        <td class="py-2 px-2">Saturday to Sunday</td>
+                        <td class="py-2 px-2">Enjoy a 50% reload bonus to keep the fun going.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+ 
+    <div class="mb-8">
+        <h3 class="text-2xl font-bold mb-2 text-yellow-500 text-center">VIP Program Highlights</h3>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-gray-700 rounded-lg">
+                <thead class="bg-gray-600 text-white">
+                    <tr>
+                     
+                        <th class="py-2 px-2">VIP Level</th>
+                        <th class="py-2 px-2">Benefits</th>
+                        <th class="py-2 px-2">Special Events</th>
+                        <th class="py-2 px-2">Cashback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-gray-900">
+                        <td class="py-2 px-2">Bronze</td>
+                        <td class="py-2 px-2">Faster withdrawals, higher bet limits</td>
+                        <td class="py-2 px-2">Monthly exclusive events</td>
+                        <td class="py-2 px-2">5%</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-2">Silver</td>
+                        <td class="py-2 px-2">All Bronze benefits, plus a personal account manager</td>
+                        <td class="py-2 px-2">Bi-monthly VIP tournaments</td>
+                        <td class="py-2 px-2">10%</td>
+                    </tr>
+                    <tr class="bg-gray-900">
+                        <td class="py-2 px-2">Gold</td>
+                        <td class="py-2 px-2">All Silver benefits, priority customer support</td>
+                        <td class="py-2 px-2">Weekly VIP-only promotions</td>
+                        <td class="py-2 px-2">15%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+	
+<section class="text-center my-8 p-4 bg-gray-800 text-white rounded-lg shadow-lg">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Rules</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-700 p-4 rounded-lg text-center">
+            <span class="text-3xl">🚫</span>
+            <h3 class="text-xl font-semibold text-yellow-500 mt-2">Prohibited Actions</h3>
+            <p class="text-lg mt-2">
+                It's vital not to use VPNs or multiple accounts, as these actions can lead to account suspension or termination. Also, remember that selling, transferring, or acquiring accounts is strictly prohibited.
+            </p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg text-center">
+            <span class="text-3xl">🆔</span>
+            <h3 class="text-xl font-semibold text-yellow-500 mt-2">Personal Information Requirements</h3>
+            <p class="text-lg mt-2">
+                During registration and ongoing interactions, make sure to provide personal information and required documents accurately. Your name on the account and payment methods must match, and all personal information should be kept up-to-date.
+            </p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg text-center">
+            <span class="text-3xl">👤</span>
+            <h3 class="text-xl font-semibold text-yellow-500 mt-2">Account Management</h3>
+            <p class="text-lg mt-2">
+                Each person is allowed only one account, linked to a unique household, email, phone number, and IP address. Any duplication can result in penalties, including account closures and forfeiture of funds.
+            </p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg text-center">
+            <span class="text-3xl">💳</span>
+            <h3 class="text-xl font-semibold text-yellow-500 mt-2">Deposit and Withdrawal Policies</h3>
+            <p class="text-lg mt-2">
+                Withdrawals must be made using the same method as your deposit, and you must wager your deposit amount before withdrawal. Be aware of specific limits and processing times, especially for large withdrawals and jackpot wins.
+            </p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg text-center">
+            <span class="text-3xl">🎁</span>
+            <h3 class="text-xl font-semibold text-yellow-500 mt-2">Bonuses and Promotions</h3>
+            <p class="text-lg mt-2">
+                Some deposit methods may exclude you from welcome offers. Bonuses must be claimed within specified periods, and any abuse of bonuses could lead to loss of bonus and possible sanctions.
+            </p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg text-center">
+            <span class="text-3xl">⚖️</span>
+            <h3 class="text-xl font-semibold text-yellow-500 mt-2">Legal and Tax Obligations</h3>
+            <p class="text-lg mt-2">
+                You are responsible for reporting and declaring profits for tax purposes as per your local laws. The casino will comply with legal obligations to report or withhold winnings if required.
+            </p>
+        </div>
+        <div class="col-span-1 lg:col-span-3 flex justify-center">
+            <div class="bg-gray-700 p-4 rounded-lg text-center w-full lg:w-1/2">
+                <span class="text-3xl">🌍</span>
+                <h3 class="text-xl font-semibold text-yellow-500 mt-2">Jurisdiction and Country Restrictions</h3>
+                <p class="text-lg mt-2">
+                    No registrations are allowed from certain jurisdictions. It’s crucial to ensure that your registration complies with local laws and regulations.
+                </p>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg text-center w-full lg:w-1/2 ml-8">
+                <span class="text-3xl">📞</span>
+                <h3 class="text-xl font-semibold text-yellow-500 mt-2">Other Rules and Regulations</h3>
+                <p class="text-lg mt-2">
+                    Always contact customer support for specific transactions, especially if there are errors due to technical issues. The casino also has specific policies for the assignment of rights and obligations.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+</main>
+
+
+
+
+
+
+
+
+<footer class="bg-gray-900 text-white p-4 md:p-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8">
+        <div>
+            <img src="logo.png" alt="Basswin Casino" class="w-32 mb-4">
+            <p>&copy; 2024 Basswin Casino. All rights reserved.</p>
+            <p>License and regulation details here.</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+            <ul>
+                <li><a href="#" class="text-yellow-500 hover:text-yellow-300">Games</a></li>
+                <li><a href="#" class="text-yellow-500 hover:text-yellow-300">Tournaments</a></li>
+                <li><a href="#" class="text-yellow-500 hover:text-yellow-300">Promotions</a></li>
+                <li><a href="#" class="text-yellow-500 hover:text-yellow-300">VIP Program</a></li>
+            </ul>
+        </div>
+        <div class="mt-4 md:mt-0">
+            <ul>
+                <li><a href="#" class="text-yellow-500 hover:text-yellow-300">Privacy Policy</a></li>
+                <li><a href="#" class="text-yellow-500 hover:text-yellow-300">Terms of Service</a></li>
+                <li><a href="#" class="text-yellow-500 hover:text-yellow-300">Responsible Gambling</a></li>
+            </ul>
+        </div>
+        <div class="mt-4 md:mt-0">
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-yellow-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-yellow-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-yellow-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+             
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
