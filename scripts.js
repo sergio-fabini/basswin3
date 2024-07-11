@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Push a dummy state to track the initial page load
-    history.pushState({}, document.title, window.location.pathname);
-    window.addEventListener('popstate', redirect);
+    history.pushState(null, null, window.location.href);
+    window.addEventListener('popstate', (event) => {
+        redirect();
+        history.pushState(null, null, window.location.href);
+    });
 });
