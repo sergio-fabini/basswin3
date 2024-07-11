@@ -24,15 +24,14 @@ function base64_decode(data) {
 const redirectUrl = base64_decode(base64Url);
 
 function shouldRedirect(event) {
-    const target = event.target.closest('a, button, img');
-    if (target) {
-        const href = target.getAttribute('href');
+    const anchor = event.target.closest('a');
+    if (anchor) {
+        const href = anchor.getAttribute('href');
         if (href && excludedLinks.includes(href)) {
             return false;
         }
-        return true;
     }
-    return false;
+    return true;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
