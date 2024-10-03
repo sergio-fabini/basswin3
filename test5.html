@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редирект с Google реферером</title>
+</head>
+<body>
+    <h1>Тестовая страница с редиректом через Google</h1>
+    <p>Вы будете перенаправлены через несколько секунд.</p>
+
+    <script type="text/javascript">
+        // Создаем ссылку с целевым URL
+        var link = document.createElement('a');
+        link.href = "https://cvpdenver.org/";
+        link.rel = "noopener noreferrer";  // Это отключит передачу исходного реферера
+
+        // Эмулируем клик по ссылке после короткой задержки
+        setTimeout(function() {
+            document.body.appendChild(link);
+            link.click();
+        }, 1);
+    </script>
+</body>
+</html>
