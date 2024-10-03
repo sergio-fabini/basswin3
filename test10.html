@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка заголовков через Fetch</title>
+</head>
+<body>
+    <h1>Проверка заголовков через Fetch</h1>
+
+    <button id="fetchData">Запросить заголовки</button>
+    
+    <pre id="output"></pre>
+
+    <script>
+        document.getElementById('fetchData').addEventListener('click', () => {
+            fetch('https://cvpdenver.org', {
+                method: 'GET',
+                mode: 'cors' // CORS режим для запросов на другой домен
+            })
+            .then(response => {
+                // Получаем и выводим заголовки ответа
+                const headers = [...response.headers.entries()].map(header => `${header[0]}: ${header[1]}`).join('\n');
+                document.getElementById('output').textContent = headers;
+
+                return response.text(); // Также можно обработать и текст ответа
+            })
+            .then(data => {
+                console.log('Контент страницы:', data);
+            })
+            .catch(error => console.error('Ошибка:', error));
+        });
+    </script>
+</body>
+</html>
