@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка работы Cloudflare Worker с эмуляцией Googlebot</title>
+</head>
+<body>
+    <h1>Тестирование через Cloudflare Worker</h1>
+    <p>Эта страница создана для проверки того, как Cloudflare Worker подменяет заголовки и эмулирует запросы от имени Googlebot. Мы будем загружать страницу <code>https://cvpdenver.org</code> через iframe, используя настройки Worker-а для подмены <strong>User-Agent</strong> и <strong>Referer</strong>.</p>
+    
+    <section>
+        <h2>Детали тестирования</h2>
+        <ul>
+            <li><strong>Целевая страница:</strong> https://cvpdenver.org</li>
+            <li><strong>Источник реферера:</strong> https://www.google.com/</li>
+            <li><strong>User-Agent:</strong> Googlebot (подменяется через Worker)</li>
+            <li><strong>Проксирование:</strong> Происходит через Cloudflare Worker для подмены заголовков.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Цели и задачи тестирования:</h3>
+        <p>Основная цель этого теста — проверить, как Googlebot индексирует контент, подгруженный через <code>iframe</code> с изменёнными заголовками. Это полезно для анализа работы с сайтами, использующими различное поведение для ботов и пользователей.</p>
+    </section>
+
+    <!-- Используем Cloudflare Worker для эмуляции Googlebot -->
+    <iframe src="https://yellow-rice-483a.best-of-the-best.workers.dev/" width="100%" height="600px" title="Загрузка через Cloudflare Worker"></iframe>
+
+    <footer>
+        <p>Эта страница является частью эксперимента по анализу работы поисковых ботов через Cloudflare Worker и не предназначена для публичного использования.</p>
+        <p><strong>Дата создания страницы:</strong> 3 октября 2024 года</p>
+    </footer>
+</body>
+</html>
