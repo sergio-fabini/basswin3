@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запрос через Cloudflare Worker</title>
+</head>
+<body>
+    <h1>Запрос через Cloudflare Worker</h1>
+    
+    <h2>Заголовки ответа:</h2>
+    <pre id="output-headers"></pre>
+
+    <h2>Текст ответа:</h2>
+    <pre id="output-body"></pre>
+
+    <script>
+        // Вызов функции при загрузке страницы
+        window.onload = () => {
+            fetch('https://nameless-mouse-6751.best-of-the-best.workers.dev', {
+                method: 'GET',
+                mode: 'cors' // CORS режим для запросов на другой домен
+            })
+            .then(response => {
+                // Получаем и выводим заголовки ответа
+                const headers = [...response.headers.entries()].map(header => `${header[0]}: ${header[1]}`).join('\n');
+                document.getElementById('output-headers').textContent = headers;
+
+                return response.text(); // Также возвращаем текст ответа
+            })
+            .then(data => {
+                // Выводим текст ответа в HTML
+                document.getElementById('output-body').textContent = data;
+            })
+            .catch(error => console.error('Ошибка:', error));
+        };
+    </script>
+</body>
+</html>
