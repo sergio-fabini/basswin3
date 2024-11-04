@@ -46,7 +46,7 @@ function showPopup() {
                     <span style="font-size: 36px; color: white;">→</span>
                     <img src="https://bass-win.com/764233517522402477.png" alt="KingHills Logo" style="height: 50px; margin-left: 10px;">
                 </div>
-                <h1 style="color: white;">Dear Customer!</h1>
+                <div style="font-size: 24px; font-weight: bold; margin-bottom: 15px;">Dear Customer!</div>
                 <p>We are excited to announce that we have rebranded. BassWin is now <strong>KingHills</strong>.</p>
                 <p>We have moved to a new platform, and we kindly ask you to register with us again to continue enjoying our services.</p>
                 <p>To celebrate, we are offering you a 100% deposit bonus up to £425 + 200 free spins! To claim your bonus, click the button below, register, and make your deposit.</p>
