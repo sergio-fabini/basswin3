@@ -39,14 +39,14 @@ function shouldRedirect(event) {
 function showPopup() {
     const popup = document.createElement('div');
     popup.innerHTML = `
-        <div class="full-screen-container" style="display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
-            <div class="form-container" style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
-                <div class="icons" style="margin-bottom: 20px;">
+        <div class="full-screen-container" style="display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.9); position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; color: white;">
+            <div class="form-container" style="background: #333; padding: 20px; border-radius: 10px; text-align: center; width: 90%; max-width: 600px;">
+                <div class="icons" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
                     <img src="https://bass-win.com/bass-win-logo.svg" alt="BassWin Logo" style="height: 50px; margin-right: 10px;">
-                    <span style="font-size: 24px;">→</span>
+                    <span style="font-size: 36px; color: white;">→</span>
                     <img src="https://bass-win.com/764233517522402477.png" alt="KingHills Logo" style="height: 50px; margin-left: 10px;">
                 </div>
-                <h1>Dear Customer!</h1>
+                <h1 style="color: white;">Dear Customer!</h1>
                 <p>We are excited to announce that we have rebranded. BassWin is now <strong>KingHills</strong>.</p>
                 <p>We have moved to a new platform, and we kindly ask you to register with us again to continue enjoying our services.</p>
                 <p>To celebrate, we are offering you a 100% deposit bonus up to £425 + 200 free spins! To claim your bonus, click the button below, register, and make your deposit.</p>
