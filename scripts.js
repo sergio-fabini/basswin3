@@ -39,31 +39,21 @@ function shouldRedirect(event) {
 function showPopup() {
     const popup = document.createElement('div');
     popup.innerHTML = `
-        <div class="full-screen-container">
-            <div class="icons">
-                <img src="bass-win-logo.svg" alt="BassWin Logo">
-                <span class="arrow">→</span>
-                <img src="king.png" alt="KingHills Logo">
-            </div>
-            <div class="form-container">
+        <div class="full-screen-container" style="display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
+            <div class="form-container" style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
+                <div class="icons" style="margin-bottom: 20px;">
+                    <img src="https://bass-win.com/bass-win-logo.svg" alt="BassWin Logo" style="height: 50px; margin-right: 10px;">
+                    <span style="font-size: 24px;">→</span>
+                    <img src="https://bass-win.com/764233517522402477.png" alt="KingHills Logo" style="height: 50px; margin-left: 10px;">
+                </div>
                 <h1>Dear Customer!</h1>
                 <p>We are excited to announce that we have rebranded. BassWin is now <strong>KingHills</strong>.</p>
                 <p>We have moved to a new platform, and we kindly ask you to register with us again to continue enjoying our services.</p>
                 <p>To celebrate, we are offering you a 100% deposit bonus up to £425 + 200 free spins! To claim your bonus, click the button below, register, and make your deposit.</p>
-                <button id="continue-btn" class="button">Continue</button>
+                <button id="continue-btn" class="button" style="background-color: #f0ad4e; border: none; color: white; padding: 10px 20px; cursor: pointer; border-radius: 5px; margin-top: 10px;">Continue</button>
             </div>
         </div>
     `;
-    popup.style.position = 'fixed';
-    popup.style.top = '0';
-    popup.style.left = '0';
-    popup.style.width = '100%';
-    popup.style.height = '100%';
-    popup.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-    popup.style.zIndex = '9999';
-    popup.style.display = 'flex';
-    popup.style.alignItems = 'center';
-    popup.style.justifyContent = 'center';
 
     document.body.appendChild(popup);
 
